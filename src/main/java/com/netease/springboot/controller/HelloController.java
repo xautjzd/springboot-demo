@@ -1,6 +1,7 @@
 package com.netease.springboot.controller;
 
-import com.netease.springboot.config.MyConfig;
+import com.netease.springboot.config.AddressConfig;
+import com.netease.springboot.config.TelConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,11 +14,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class HelloController {
 
 	@Autowired
-	private MyConfig myConfig;
+	private AddressConfig myConfig;
+	@Autowired
+	private TelConfig telConfig;
 
 	@RequestMapping("/")
 	@ResponseBody
 	String index() {
-		return myConfig.getName() + ":" + myConfig.getAddress();
+		return myConfig.getName() + ":" + myConfig.getAddress() + ":" + telConfig.getTelephone();
 	}
 }

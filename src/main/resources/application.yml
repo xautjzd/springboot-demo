@@ -1,16 +1,19 @@
 spring:
   profiles.active: prod
 
+# common properties
+name: jzd
+
 ---
 spring:
   profiles: dev
 
-name: jzd
 address: hangzhou
+telephone: 120
 
 ---
 spring:
   profiles: prod
 
-name: jzd
 address: xi'an
+telephone: 119

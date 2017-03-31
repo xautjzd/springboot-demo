@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 //@PropertySource("classpath:application.properties")
 @ConfigurationProperties
-public class MyConfig {
+public class AddressConfig {
 
 	private String name;
 	private String address;
