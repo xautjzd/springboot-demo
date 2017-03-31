@@ -1,19 +1,38 @@
 spring:
-  profiles.active: prod
+  profiles.active: yq-liantiao
 
 # common properties
 name: jzd
 
 ---
+# main data source
 spring:
-  profiles: dev
+  profiles: yq-liantiao
 
-address: hangzhou
-telephone: 120
+  datasource:
+    url: jdbc:mysql://10.180.156.35:3306/nce?&autoReconnect=true&connectTimeout=5000&socketTimeout=50000&generateSimpleParameterMetadata=true
+    username: nce
+    password: nce
+    driverClassName: com.mysql.jdbc.Driver
+    initialSize: 32
+    maxActive: 200
+    maxIdle: 64
+    minIdle: 32
+
+# log datasource
+log:
+  datasource:
+    url: jdbc:mysql://10.180.156.35:3306/nce_logs?&autoReconnect=true&connectTimeout=5000&socketTimeout=50000
+    username: nce
+    password: nce
+    driverClassName: com.mysql.jdbc.Driver
+    initialSize: 32
+    maxActive: 200
+    maxIdle: 64
+    minIdle: 32
+
 
 ---
 spring:
-  profiles: prod
+  profiles: yq-ci
 
-address: xi'an
-telephone: 119
