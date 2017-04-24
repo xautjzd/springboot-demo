@@ -1,0 +1,8 @@
+jdbc.url: jdbc:mysql://127.0.0.1:3306/test?&autoReconnect=true&connectTimeout=5000&socketTimeout=50000&generateSimpleParameterMetadata=true
+jdbc.username: root
+jdbc.password: mysqltest
+jdbc.driverClass: com.mysql.jdbc.Driver
+jdbc.initialSize: 32
+jdbc.maxActive: 200
+jdbc.maxIdle: 64
+jdbc.minIdle: 32
